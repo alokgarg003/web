@@ -1,120 +1,4 @@
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
-// import { useNavigate } from "react-router-dom";
-// import {
-//   TextField,
-//   Button,
-//   Box,
-//   Typography,
-//   Container,
-//   Alert,
-// } from "@mui/material";
-// import { jwtDecode } from "jwt-decode";
 
-// const Login = ({ updateNavButtons }) => {
-//   const [credentials, setCredentials] = useState({
-//     username: "",
-//     password: "",
-//   });
-//   const [error, setError] = useState("");
-//   const navigate = useNavigate();
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setCredentials({ ...credentials, [name]: value });
-//   };
-
-//   useEffect(()=>{
-//     updateNavButtons([])
-//   },[])
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//         const response = await axios.post(
-//             "http://localhost:5000/authenticate",
-//             credentials,
-//             {
-//                 headers: {
-//                     'Content-Type': 'application/json',
-//                     'Accept': 'application/json'
-//                 },
-//                 withCredentials: true  // Add this
-//             }
-//         );
-        
-//         // Check for jwtToken in response
-//         const token = response.data.jwtToken; // Changed from token to jwtToken
-//         if (token) {
-//             localStorage.setItem("token", token);
-//             const decodedToken = jwtDecode(token);
-//             localStorage.setItem("role", decodedToken.Role);
-//             navigate("/");
-//         } else {
-//             setError("Invalid response from server");
-//         }
-//     } catch (error) {
-//         console.error("Login error:", error);
-//         setError(error.response?.data?.message || "Invalid username or password");
-//     }
-// };
-
-//   return (
-//     <Container component="main" maxWidth="xs">
-//       <Box
-//         sx={{
-//           marginTop: 8,
-//           display: "flex",
-//           flexDirection: "column",
-//           alignItems: "center",
-//         }}
-//       >
-//         <Typography component="h1" variant="h5">
-//           Login
-//         </Typography>
-//         {error && (
-//           <Alert severity="error" sx={{ mt: 2 }}>
-//             {error}
-//           </Alert>
-//         )}
-//         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
-//           <TextField
-//             margin="normal"
-//             required
-//             fullWidth
-//             id="username"
-//             label="Username"
-//             name="username"
-//             value={credentials.username}
-//             onChange={handleChange}
-//             autoFocus
-//           />
-//           <TextField
-//             margin="normal"
-//             required
-//             fullWidth
-//             name="password"
-//             label="Password"
-//             type="password"
-//             id="password"
-//             value={credentials.password}
-//             onChange={handleChange}
-//           />
-//           <Button
-//             type="submit"
-//             fullWidth
-//             variant="contained"
-//             sx={{ mt: 3, mb: 2 }}
-//           >
-//             Login
-//           </Button>
-//         </Box>
-//       </Box>
-//     </Container>
-//   );
-// };
-
-// export default Login;
 // web/src/components/certificate/Auth/Login.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -248,7 +132,7 @@ const Login = ({ updateNavButtons }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/authenticate",
+        "http://localhost:8080/authenticate",
         formData,
         {
           headers: {
