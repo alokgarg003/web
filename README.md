@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# Online Certificate Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+The **Online Certificate Management System** is a prototype designed to manage and streamline the process of certificate issuance, authorization, and user management. The project demonstrates the integration of modern frontend and backend technologies to solve complex problems in a simple, intuitive manner.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Objective
+The primary goal of this project is to:
+- Provide a platform for managing user certificates efficiently.
+- Showcase the implementation of key concepts like state persistence, user roles, and API integration.
+- Develop a clean and structured codebase adhering to best practices.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+### Admin Features:
+- View all pending requests and active users.
+- Create new users and reset their passwords.
+- Search certificates using user ID, name, or certificate ID.
+- Authorize or deauthorize certificate requests.
+- Download certificates.
+- Analytics dashboard with graphical representations of data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### User Features:
+- Log in with admin-provided credentials and change the password if needed.
+- Request new certificates from the admin.
+- Track the status of certificate requests in a card-based UI.
+- Download authorized certificates.
+- View request and certificate analytics on the user dashboard.
 
-### `npm test`
+### Additional Highlights:
+- **State Persistence**: Ensures the user remains logged in across tabs until logout.
+- **Input Validation**: Validates all user inputs to prevent errors and ensure smooth operation.
+- **Exception Handling**: Handles edge cases and errors gracefully.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Tech Stack
+### Frontend:
+- **React** with Material-UI for component styling.
+- **Axios** for HTTP requests.
+- **Deployed on**: [Vercel](https://vercel.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend:
+- **Spring Boot** with a monolithic architecture.
+- **MySQL** as the database.
+- **JWT Security** for secure login.
+- **Deployed on**: [Railway](https://railway.app/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Additional Practices:
+- Followed clean code principles and modular code structure.
+- Integrated CORS for frontend-backend communication.
+- Comprehensive API testing for various scenarios.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Deployment
+### Live Demo:
+Explore the project here: [Online Certificate Management System](https://web-xi-orcin.vercel.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Admin Credentials:
+- **Username**: `admin`
+- **Password**: `admin`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### User Credentials:
+- **Username**: `alok`
+- **Password**: `Alok@123`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## How to Use
+### For Admin:
+1. Log in using the provided admin credentials.
+2. Manage user accounts, search certificates, and authorize/deauthorize requests.
+3. Access analytics to view the system's usage data.
 
-## Learn More
+### For Users:
+1. Log in with the provided credentials and update your password.
+2. Request certificates and monitor their status.
+3. Download authorized certificates from your dashboard.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Repository Structure
+```
+Online-Certificate-Management-System/
+├── frontend/                # React and Material-UI code
+│   ├── src/
+│   │   ├── components/  # Reusable React components
+│   │   ├── utils/       # Utility functions
+│   └── public/      # Static assets
+├── backend/                 # Spring Boot application
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/         # Controllers, services, repositories
+│   │   └── resources/    # Configuration files
+├── README.md             # Documentation
+└── .gitignore            # Git ignored files
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## How to Run Locally
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
 
-### Analyzing the Bundle Size
+2. Navigate to the frontend directory and install dependencies:
+   ```bash
+   cd web
+   npm install
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Navigate to the backend directory and run the application:
+   ```bash
+   cd backend
+   mvn spring-boot:run
+   ```
 
-### Making a Progressive Web App
+4. Access the application at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## GitHub Repository
+Check out the complete source code here: [GitHub Repository](https://github.com/alokgarg003/web/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Skills Demonstrated
+- React, Material-UI, and Axios.
+- Spring Boot, MySQL, and JWT.
+- Frontend-backend integration.
+- API development and testing.
+- Clean code principles and exception handling.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Open Request
+If you are working on a similar project or need guidance related to React, Spring Boot, or full-stack development, feel free to connect with me! I offer free mentorship during weekends (Saturday & Sunday).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
