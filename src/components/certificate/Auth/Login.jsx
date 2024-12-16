@@ -132,7 +132,7 @@ const Login = ({ updateNavButtons }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/authenticate",
+        "https://ocms-backend.up.railway.app/authenticate",
         formData,
         {
           headers: {
